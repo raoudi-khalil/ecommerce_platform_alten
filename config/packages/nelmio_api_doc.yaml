@@ -1,0 +1,10 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: 'API documentation'
+            description: 'Swagger UI for the project'
+            version: '1.0.0'
+    areas:
+        default:
+            path_patterns: 
+                - ^/(?!_error)    
