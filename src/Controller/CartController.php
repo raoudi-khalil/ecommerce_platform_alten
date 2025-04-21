@@ -12,6 +12,7 @@ use OpenApi\Attributes as OA;
 use Nelmio\ApiDocBundle\Attribute\Model;
 
 #[Route('/cart', name: 'cart_')]
+#[OA\Security(name: 'Bearer')]
 class CartController extends AbstractController
 {
     private CartManager $cartManager;

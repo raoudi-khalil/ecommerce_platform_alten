@@ -4,6 +4,14 @@ nelmio_api_doc:
             title: 'API documentation'
             description: 'Swagger UI for the project'
             version: '1.0.0'
+        components:
+            securitySchemes:
+                Bearer:
+                    type: http
+                    scheme: bearer
+                    bearerFormat: JWT
+        security:
+            - Bearer: []
     areas:
         default:
             path_patterns: 

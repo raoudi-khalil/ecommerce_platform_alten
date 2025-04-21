@@ -17,6 +17,7 @@ use OpenApi\Attributes as OA;
 use Nelmio\ApiDocBundle\Attribute\Model;
 
 #[Route('/products')]
+#[OA\Security(name: 'Bearer')]
 class ProductController extends AbstractController
 {
     public function __construct(

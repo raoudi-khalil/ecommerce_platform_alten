@@ -11,6 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use OpenApi\Attributes as OA;
 
 #[Route('/wishlist', name: 'wishlist_')]
+#[OA\Security(name: 'Bearer')]
 class WishlistController extends AbstractController
 {
     public function __construct(

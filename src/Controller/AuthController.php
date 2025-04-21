@@ -41,6 +41,7 @@ class AuthController extends AbstractController
             new OA\Response(response: 422, description: 'Unexpected error')
         ]
     )]
+    #[OA\Security(name: null)]
     public function register(Request $request, EntityManagerInterface $em): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
@@ -99,6 +100,7 @@ class AuthController extends AbstractController
             new OA\Response(response: 422, description: 'Unexpected error')
         ]
     )]
+    #[OA\Security(name: null)]
     public function login(Request $request, UserPasswordHasherInterface $hasher, EntityManagerInterface $em): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
