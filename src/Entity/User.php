@@ -35,7 +35,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[OA\Property(example: "John", description: "First name of the user")]
     private ?string $firstname = null;
 
-    #[ORM\Column(length: 255, unique: true)]
+    #[ORM\Column(length: 191, unique: true)]
     #[Assert\NotBlank(message: "Email is required.")]
     #[Assert\Email(message: "Invalid email format.")]
     #[OA\Property(example: "john@example.com", description: "Email address (also used as login)")]
